@@ -53,6 +53,7 @@ for video = 1:Nvideo
     %% Convert VIF to AVI
     AVIpath = strrep(Path, rootdir, AVIdir);
     AVIfilename = [FileName,'.avi'];
+    mkdir(AVIpath)
     [~,AVI]=convertVIF2AVI(Path,[FileName,Ext],StartTimestamp,Nframes,AOIWidth,AOIHeight,AVIpath,AVIfilename);
     else
         disp('Video file is empty')

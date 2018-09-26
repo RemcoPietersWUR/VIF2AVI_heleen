@@ -5,10 +5,13 @@ function [timestamp]=VIFtimestamp(PathName,FileName,Nframes,AOIWidth,AOIHeight)
 if (AOIHeight == 1024 && AOIWidth == 1280)
 footer_size = 504;
 end
-if (AOIHeight == 1020 && AOIWidth == 1020)
-footer_size = 488;
+if (AOIHeight == 1020 && AOIWidth == 1040)
+footer_size = 568;
 end
 if (AOIHeight == 1024 && AOIWidth == 1020)
+footer_size = 488;
+end
+if (AOIHeight == 1020 && AOIWidth == 1020)
 footer_size = 488;
 end
 if (AOIHeight == 1020 && AOIWidth == 970)
