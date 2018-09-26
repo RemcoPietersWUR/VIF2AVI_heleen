@@ -42,6 +42,7 @@ for video = 1:Nvideo
     isloc = findstr(AOIHeight_info,'=');
     AOIHeight = str2num(AOIHeight_info(isloc+1:end));
     
+    if Nframes > 0
     %% Get time stamps
     %Preallocate timestamp array        
     timestamp=zeros(Nframes,1,'uint64');
@@ -53,6 +54,8 @@ for video = 1:Nvideo
     AVIpath = strrep(Path, rootdir, AVIdir);
     AVIfilename = [FileName,'.avi'];
     [~,AVI]=convertVIF2AVI(Path,[FileName,Ext],StartTimestamp,Nframes,AOIWidth,AOIHeight,AVIpath,AVIfilename);
-
+    else
+        disp('Video file is empty')
+    end
     
 end
