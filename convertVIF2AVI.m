@@ -38,7 +38,7 @@ for frame=1:Nframes
     fseek(fid,footer_size,'cof');
 end
 
-v = VideoWriter([AVIpath,AVIfilename],'Grayscale AVI');
+v = VideoWriter(fullfile(AVIpath,AVIfilename),'Grayscale AVI');
 open(v)
 writeVideo(v,AVI)
 close(v)
